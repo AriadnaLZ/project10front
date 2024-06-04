@@ -11,6 +11,8 @@
 body {
   background-color: black;
   color: aliceblue;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -21,11 +23,12 @@ main {
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 20px;
-height: 65svh;
+  min-height: 65svh;
+
 }
 
-@media screen and (min-width:1500px) {
-  main {
-    height: 70svh;
-  }
+@media screen and (min-width: 1500px) {
+  main{
+    min-height: 70svh
+  };
 }
