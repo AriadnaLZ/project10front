@@ -1,3 +1,4 @@
+
 import { Home } from '../Home/Home'
 import './LoginRegister.css'
 
@@ -131,13 +132,10 @@ export const LoginRegister = () => {
       pError.innerText = 'Usuario o contraseña incorrectos'
       pError.className = 'pError'
       form.append(pError)
-      return
+      setTimeout(() => {pError.remove()}, 3000)
     }
 
-    const pError = document.querySelector('.error')
-    if (pError) {
-      pError.remove()
-    }
+
 
     const respuestaFinal = await res.json()
     console.log(respuestaFinal)
@@ -206,6 +204,15 @@ export const LoginRegister = () => {
 
 
     form.addEventListener('submit', async () => {
+      
+      
+    if (inputNombre.value.length === 0 || inputUN.value.length === 0 || inputPass.value.length === 0 || inputEmail.value.length === 0 || inputTelefono.value.length === 0 ) {
+      const pError = document.createElement('p')
+      pError.innerText = 'Rellena todos los datos'
+      pError.className = 'pError'
+      form.append(pError)
+      setTimeout(() => {pError.remove()}, 3000)
+    } else {
       username = inputUN.value
      const email = inputEmail.value
      const nombre = inputNombre.value
@@ -246,6 +253,8 @@ export const LoginRegister = () => {
           login(main)
         })
       }
+    }
+      
 
     })
       
