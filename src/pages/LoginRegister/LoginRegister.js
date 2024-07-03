@@ -265,9 +265,8 @@ export const LoginRegister = () => {
     main.append(divLogueado)
     const pLogueado = document.createElement('p')
     const user = localStorage.getItem('userName')
-    let username = user.replace('"', ' ')
-    username = username.replace('"', ' ')
-    pLogueado.innerText = ` Hola ${username}
+
+    pLogueado.innerText = ` Hola ${user}
     Estás logead@ correctamente`
     divLogueado.append(pLogueado)
     const buttonLogout = document.createElement('button')
@@ -364,13 +363,11 @@ if (res.status === 400) {
   if (localStorage.getItem('token')) {
     main.innerHTML = ''
     const user = localStorage.getItem('userName')
-    let username = user.replace('"', ' ')
-    username = username.replace('"', ' ')
       const divLogeado = document.createElement('div')
       main.append(divLogeado)
       divLogeado.className = 'divLogeado'
       const pLogeado = document.createElement('p')
-      pLogeado.innerText = `Hola ${username}!!
+      pLogeado.innerText = `Hola ${user}!!
       Estás logead@ correctamente`
       divLogeado.append(pLogeado)
 
