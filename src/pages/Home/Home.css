@@ -18,8 +18,3 @@
   box-shadow: 3px 3px 10px rgba(185, 172, 172, 0.555);
   transition: transform 0.3s ease;
 }
-
-.sectionImages img:hover {
-  transform: scale(1.15);
-  z-index: 999;
-}

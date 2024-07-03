@@ -15,8 +15,8 @@ input {
 }
 
 .buttonLogin {
-  height: 50px;
-  width: 90px;
+  height: 60px;
+  width: 120px;
   background-color: rgb(231, 220, 220);
   font-size: 20px;
 
@@ -26,12 +26,7 @@ input {
   color: red;
 }
 
-.sectionButtonsLogin {
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
-padding-top: 50px;
-}
+
 
 .divRegistro {
   display: flex;
@@ -53,4 +48,41 @@ padding-top: 50px;
   width: 120px;
   height: 50px;
   background-color: rgb(255, 196, 251);
+}
+
+.divRegistroLogin {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sectionLogin{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.divError {
+  display: flex;
+  flex-wrap: wrap;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionRegisterLogin {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+justify-content: center;
+align-items: center;
+
+}
+
+.pRegistroEnlace {
+  cursor: pointer;
+}
+
+.sectionRegisterLogin > p {
+  font-size: 17px;
 }

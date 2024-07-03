@@ -6,17 +6,29 @@ export const ProximosEventos = async () => {
 
     const main = document.querySelector('main')
     main.innerHTML = ' '
+
+    const sectionProximosViajes = document.createElement('section')
+
+    sectionProximosViajes.className = 'sectionProximosViajes'
+    main.append(sectionProximosViajes)
+
+
+    const h2cargando = document.createElement('h2')
+    h2cargando.innerText = ' Cargando...'
+    sectionProximosViajes.append(h2cargando)
    
     const res = await fetch( 'https://project10back.vercel.app/api/v1/eventos')
     const eventos = await res.json()
-    const sectionProximosViajes = document.createElement('section')
-    sectionProximosViajes.className = 'sectionProximosViajes'
-    main.append(sectionProximosViajes)
+
+
+  
+
     pintarEventos(eventos, sectionProximosViajes)
 
   }
 
 const pintarEventos = (array, elementoPadre) => {
+  elementoPadre.innerHTML = ' '
   for (const element of array) {
     const articleEvento = document.createElement('article')
     articleEvento.className = 'articleEvento'
